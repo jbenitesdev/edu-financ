@@ -23,7 +23,7 @@ const App: React.FC = () => {
 
   const handleAddUser = async (data: User) => {
     let response = await axios.post("http://localhost:3001/usuario", data);
-    console.log(response)
+    
     if (response.status == 200 || response.status == 201) {
       setMessage("Parabéns você entrou na lista");
       setValue("nome", "")
